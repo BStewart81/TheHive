@@ -1,4 +1,4 @@
-package mian.java.TheHive;
+package main.java.TheHive;
 
 import java.util.Vector;
 
@@ -24,7 +24,7 @@ public class Apiary {
     		
     		speciesChooser = (int)(Math.random() * 3);
     		Hive HV = new Hive(speciesList[speciesChooser]);
-    		
+    		System.out.println("create " + speciesList[speciesChooser] + " hive");
     		
     	}
     	
@@ -32,6 +32,14 @@ public class Apiary {
  
     public static Apiary getInstance(){
         return INSTANCE;
+    }
+    
+    public void printHives() {
+    	
+    	this.getInstance().HiveList.forEach(Hive->{
+    		System.out.println(Hive.getName());
+    	    Hive.printHive();
+    	});
     }
 
 }
