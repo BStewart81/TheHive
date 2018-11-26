@@ -1,4 +1,4 @@
-package mian.java.TheHive;
+package main.java.TheHive;
 
 import java.util.Vector;
 
@@ -67,15 +67,27 @@ public Hive(String spc) {
     	
     		if (sp.equals("brick")) {
     		BrickBeeDecorator buzz = new BrickBeeDecorator(new Bee());
+    			if (i==1 || i==11) {
+    				buzz.setQueen(1);
+    			}
     			bees.add(buzz);
     		} else if(sp.equals("steel")) {
         		SteelBeeDecorator buzz = new SteelBeeDecorator(new Bee());
+        		if (i==1 || i==11) {
+    				buzz.setQueen(1);
+    			}
         		bees.add(buzz);
         	} else if(sp.equals("electric")) {
         		ElectricBeeDecorator buzz = new ElectricBeeDecorator(new Bee());
+        		if (i==1 || i==11) {
+    				buzz.setQueen(1);
+    			}
         		bees.add(buzz);
         	} else if(sp.equals("wood")) {
         		WoodBeeDecorator buzz = new WoodBeeDecorator(new Bee());
+        		if (i==1 || i==11) {
+    				buzz.setQueen(1);
+    			}
         		bees.add(buzz);
         	}
     		
@@ -84,4 +96,13 @@ public Hive(String spc) {
     		    		
     	}
     }
+
+	public void printHive() {
+		
+		bees.forEach(Bee->
+    		System.out.println(Bee));
+    	    
+    	
+		
+	}
 }

@@ -1,20 +1,19 @@
-package mian.java.TheHive;
+package main.java.TheHive;
 
-public class ElectricBeeDecorator extends BeeDecorator{
+public class WoodBeeDecorator extends BeeDecorator {
 	private String color2;
 	private Boolean queen;
 	private String name;
-	private static int count = 0;
+	private static int count;
 	
-	
-	public ElectricBeeDecorator(BeeInterface decoratedBee) {
+	public WoodBeeDecorator(BeeInterface decoratedBee) {
 		super(decoratedBee);
 		
-		name = "ElectricBee" + String.valueOf(count);
-		color2 = "blue";
+		name = "WoodBee" + String.valueOf(count);
+		color2 = "grey";
 		queen = false;
 		count++;
-		
+		System.out.println("construct " + name);
 	}
 
 	@Override
@@ -54,12 +53,14 @@ public class ElectricBeeDecorator extends BeeDecorator{
 		return color2;
 	}
 	
+	@Override
 	public Boolean getQueen() {
 		
 		return queen;
 		
 	}
 	
+	@Override
 	public void setQueen(int qn) {
 		
 		if (qn ==1) {
@@ -69,7 +70,20 @@ public class ElectricBeeDecorator extends BeeDecorator{
 			queen = false;
 		}
 	}
+	
+	@Override
+	public String getName() {
+		
+		return name;
+		
+	}
+	
+	@Override
+	public void setName(String nm) {
+		
+		name = nm;
+		
+	}
 
 }
-
 
