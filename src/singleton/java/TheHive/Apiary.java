@@ -2,7 +2,8 @@ package singleton.java.TheHive;
 
 import java.util.Vector;
 
-import builder.java.TheHive.Hive;
+
+import builder.java.TheHive.HiveInterface;
 
 /*************
  * Apiary Class
@@ -19,7 +20,7 @@ public class Apiary {
 	
 	private static final Apiary INSTANCE = new Apiary();
 	
-	private static Vector <Hive> HiveList;
+	private static Vector <HiveInterface> HiveList;
        
 	
     /*************
@@ -29,7 +30,8 @@ public class Apiary {
      */
     private Apiary() {
     	
-    	HiveList = new Vector<Hive>();
+    	HiveList = new Vector<HiveInterface>();
+    	System.out.println("*******NEW APIARY CREATED******");
     		
     }
     
@@ -49,9 +51,9 @@ public class Apiary {
      * 
      * returns the single Apiary's HiveList
      * 
-     * @return Vector<Hive> 
+     * @return Vector<HiveInterface> 
      */
-    public static Vector<Hive> getHiveList(){
+    public static Vector<HiveInterface> getHiveList(){
     	
     	return HiveList;
     }
@@ -63,7 +65,7 @@ public class Apiary {
      * 
      * @param Hive
      */
-    public static void addToHiveList(Hive hv) {
+    public static void addToHiveList(HiveInterface hv) {
     	
     	HiveList.add(hv);
     	
@@ -76,7 +78,7 @@ public class Apiary {
      * 
      * @param Hive
      */
-    public static void removeFromHiveList(Hive hv) {
+    public static void removeFromHiveList(HiveInterface hv) {
     	
     	HiveList.remove(hv);
     	

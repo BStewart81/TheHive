@@ -1,5 +1,6 @@
 package builder.java.TheHive;
 
+
 import singleton.java.TheHive.Apiary;
 
 public class Builder {
@@ -12,21 +13,37 @@ public class Builder {
 	 
 	public void buildApiary() {
 		
-		Apiary.getInstance();
+				
+		HiveInterface hv;
 		
-		rndm = (int)((Math.random() * 9)+1);
-    	
+		rndm = (int)((Math.random() * 9)+4);
+		speciesChooser = 1;
+		
     	for (int i = 0; i < rndm; i++) {
     		
-    		speciesChooser = (int)(Math.random() * 3);
-    		Hive HV = new Hive(speciesList[speciesChooser]);
     		
-    		Apiary.addToHiveList(HV);
+    		
+    		if (speciesChooser == 1) {
+    			 hv = new BrickHive();
+    		} else if (speciesChooser == 2) {
+    			hv = new ElectricHive();
+    		} else if (speciesChooser == 3 ) {
+    			 hv = new SteelHive();
+    		} else {
+    			 hv = new WoodHive();
+    		}
+    		
+    		Apiary.addToHiveList(hv);
+    		
+    		if (speciesChooser >= 4) {
+    			speciesChooser = 0;
+    		}
+    		speciesChooser++;
     		System.out.println("BUILDER created hive");
     		
     		
     		
     	}
-	}
+	}}
 
-}
+

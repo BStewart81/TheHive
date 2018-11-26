@@ -5,7 +5,7 @@ import builder.java.TheHive.BeeInterface;
 public class BrickBeeDecorator extends BeeDecorator {
 
 	private String color2;
-	private Boolean queen;
+	private String role;
 	private String name;
 	private static int count = 0;
 	
@@ -13,7 +13,7 @@ public class BrickBeeDecorator extends BeeDecorator {
 		super(decoratedBee);
 		
 		color2 = "red";
-		queen = false;
+		role = "";
 		name = "BrickBee" + String.valueOf(count);
 		count++;
 		System.out.println("construct " + name);
@@ -57,21 +57,16 @@ public class BrickBeeDecorator extends BeeDecorator {
 	}
 	
 	@Override
-	public Boolean getQueen() {
+	public String getRole() {
 		
-		return queen;
+		return role;
 		
 	}
 	
 	@Override
-	public void setQueen(int qn) {
+	public void setRole(String rl) {
 		
-		if (qn ==1) {
-			queen = true;
-		}
-		else {
-			queen = false;
-		}
+		role = rl;
 	}
 	
 	@Override

@@ -11,12 +11,12 @@ public interface BeeInterface {
 	
 	public String getColor1();
 	
-	public void setQueen(int qn);
-	
-	public Boolean getQueen();
-	
 	public String getName();
 	
 	public void setName(String nm);
+
+	void setRole(String rl);
+
+	String getRole();
 
 }

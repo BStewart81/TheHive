@@ -5,14 +5,14 @@ public class Bee implements BeeInterface{
 	private String species;
 	private String color1;
 	private String name;
-	private Boolean queen;
+	private String role;
 	
 	public Bee() {
 		
 		species = "";
 		color1 = "black";
 		name = "";
-		queen = false;
+		role = "";
 		
 	}
 
@@ -43,21 +43,16 @@ public class Bee implements BeeInterface{
 	
 	
 	@Override
-	public Boolean getQueen() {
+	public String getRole() {
 		
-		return queen;
+		return role;
 		
 	}
 	
 	@Override
-	public void setQueen(int qn) {
+	public void setRole(String rl) {
 		
-		if (qn ==1) {
-			queen = true;
-		}
-		else {
-			queen = false;
-		}
+		role = rl;
 	}
 	
 	@Override
