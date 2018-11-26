@@ -111,15 +111,7 @@ public Hive(String spc) {
 	 *  private int rndm;
      *private int speciesChooser;
 	 * 
-	 *rndm = (int)((Math.random() * 9)+1);
-    	
-    	for (int i = 0; i < rndm; i++) {
-    		
-    		speciesChooser = (int)(Math.random() * 3);
-    		Hive HV = new Hive(speciesList[speciesChooser]);
-    		System.out.println("create " + speciesList[speciesChooser] + " hive");
-    		
-    	}
+	 *
     	
     	 public void printHives() {
     	
