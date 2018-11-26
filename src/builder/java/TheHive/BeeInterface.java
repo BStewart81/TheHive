@@ -2,6 +2,7 @@ package builder.java.TheHive;
 
 public interface BeeInterface {
 	
+	
 
 	public void setSpecies(String sp);
 	

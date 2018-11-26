@@ -12,13 +12,15 @@ public class ElectricBeeDecorator extends BeeDecorator{
 	public ElectricBeeDecorator(BeeInterface decoratedBee) {
 		super(decoratedBee);
 		
-		name = "ElectricBee" + String.valueOf(count);
-		color2 = "blue";
-		role = "";
-		count++;
-		System.out.println("construct " + name);
-		
-	}
+		if (decoratedBee.getName().equals("")) {
+			decoratedBee.setSpecies("electric");
+			color2 = "blue";
+			decoratedBee.setName("ElectricBee" + String.valueOf(count));
+			count++;
+			System.out.println("construct " + name);
+		} else {
+			decoratedBee.setColor1("blue");
+		}}
 
 	@Override
 	public void setSpecies(String sp) {

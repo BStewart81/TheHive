@@ -11,12 +11,15 @@ public class SteelBeeDecorator extends BeeDecorator {
 	public SteelBeeDecorator(BeeInterface decoratedBee) {
 		super(decoratedBee);
 		
-		color2 = "grey";
-		role = "";
-		name = "SteelBee" + String.valueOf(count);
-		count++;
-		System.out.println("construct " + name);
-	}
+		if (decoratedBee.getName().equals("")) {
+			decoratedBee.setSpecies("steel");
+			color2 = "grey";
+			decoratedBee.setName("SteelBee" + String.valueOf(count));
+			count++;
+			System.out.println("construct " + name);
+		} else {
+			decoratedBee.setColor1("grey");
+		}}
 
 	@Override
 	public void setSpecies(String sp) {

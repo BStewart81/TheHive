@@ -11,12 +11,15 @@ public class WoodBeeDecorator extends BeeDecorator {
 	public WoodBeeDecorator(BeeInterface decoratedBee) {
 		super(decoratedBee);
 		
-		name = "WoodBee" + String.valueOf(count);
-		color2 = "grey";
-		role = "";
-		count++;
-		System.out.println("construct " + name);
-	}
+		if (decoratedBee.getName().equals("")) {
+			decoratedBee.setSpecies("wood");
+			color2 = "brown";
+			decoratedBee.setName("WoodBee" + String.valueOf(count));
+			count++;
+			System.out.println("construct " + name);
+		} else {
+			decoratedBee.setColor1("brown");
+		}}
 
 	@Override
 	public void setSpecies(String sp) {
