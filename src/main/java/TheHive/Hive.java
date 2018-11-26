@@ -9,7 +9,7 @@ public class Hive {
 	private Vector <BeeInterface> bees;
 	private static int count=0;
 	private int pop;
-	
+	public String[] speciesList = {"brick","electric","steel","wood"}; 
 	
 	public Hive() {
 		
@@ -105,4 +105,30 @@ public Hive(String spc) {
     	
 		
 	}
+	
+	/**********8
+	 * 
+	 * 
+	 *rndm = (int)((Math.random() * 9)+1);
+    	
+    	for (int i = 0; i < rndm; i++) {
+    		
+    		speciesChooser = (int)(Math.random() * 3);
+    		Hive HV = new Hive(speciesList[speciesChooser]);
+    		System.out.println("create " + speciesList[speciesChooser] + " hive");
+    		
+    	}
+    	
+    	 public void printHives() {
+    	
+    	this.getInstance().HiveList.forEach(Hive->{
+    		System.out.println(Hive.getName());
+    	    Hive.printHive();
+    	});
+    }
+
+	 * 
+	 * 
+	 *
+	 */
 }

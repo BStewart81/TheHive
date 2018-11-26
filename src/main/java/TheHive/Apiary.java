@@ -2,10 +2,17 @@ package main.java.TheHive;
 
 import java.util.Vector;
 
+/*************
+ * Apiary Class
+ * @author Brandon Stewart
+ * @version 26Nov18
+ * 
+ * this is a Singleton class that creates an Apiary
+ */
 
 public class Apiary {
 	
-	public String[] speciesList = {"brick","electric","steel","wood"}; 
+	
 
 	
 	private static final Apiary INSTANCE = new Apiary();
@@ -14,32 +21,28 @@ public class Apiary {
     private int rndm;
     private int speciesChooser;
     
-	private Apiary() {
+	
+    /*************
+     * Apiary construcor method.
+     * 
+     * creates an apiary
+     */
+    private Apiary() {
     	
     	HiveList = new Vector<Hive>();
-    	
-    	rndm = (int)((Math.random() * 9)+1);
-    	
-    	for (int i = 0; i < rndm; i++) {
     		
-    		speciesChooser = (int)(Math.random() * 3);
-    		Hive HV = new Hive(speciesList[speciesChooser]);
-    		System.out.println("create " + speciesList[speciesChooser] + " hive");
-    		
-    	}
-    	
     }
- 
+    
+    /*************
+     * getInstance method.
+     * 
+     * returns the single Apiary instance
+     * 
+     * @return Apiary 
+     */
     public static Apiary getInstance(){
         return INSTANCE;
     }
     
-    public void printHives() {
-    	
-    	this.getInstance().HiveList.forEach(Hive->{
-    		System.out.println(Hive.getName());
-    	    Hive.printHive();
-    	});
-    }
-
+    
 }
