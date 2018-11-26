@@ -14,7 +14,7 @@ public class Hive {
 	private Vector <BeeInterface> bees;
 	private static int count=0;
 	private int pop;
-	public String[] speciesList = {"brick","electric","steel","wood"}; 
+	
 	
 	public Hive() {
 		
