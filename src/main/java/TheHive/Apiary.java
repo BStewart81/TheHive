@@ -17,10 +17,8 @@ public class Apiary {
 	
 	private static final Apiary INSTANCE = new Apiary();
 	
-	private Vector <Hive> HiveList;
-    private int rndm;
-    private int speciesChooser;
-    
+	private static Vector <Hive> HiveList;
+       
 	
     /*************
      * Apiary construcor method.
@@ -44,5 +42,41 @@ public class Apiary {
         return INSTANCE;
     }
     
+    /*************
+     * getHiveList method.
+     * 
+     * returns the single Apiary's HiveList
+     * 
+     * @return Vector<Hive> 
+     */
+    public static Vector<Hive> getHiveList(){
+    	
+    	return HiveList;
+    }
     
+    /*************
+     * addToHiveList.
+     * 
+     * adds given Hive to HiveList
+     * 
+     * @param Hive
+     */
+    public static void addToHiveList(Hive hv) {
+    	
+    	HiveList.add(hv);
+    	
+    }
+    
+    /*************
+     * removeFromHiveList.
+     * 
+     * removes given Hive from HiveList
+     * 
+     * @param Hive
+     */
+    public static void removeFromHiveList(Hive hv) {
+    	
+    	HiveList.remove(hv);
+    	
+    }
 }

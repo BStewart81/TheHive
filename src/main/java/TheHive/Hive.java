@@ -108,6 +108,8 @@ public Hive(String spc) {
 	
 	/**********8
 	 * 
+	 *  private int rndm;
+     *private int speciesChooser;
 	 * 
 	 *rndm = (int)((Math.random() * 9)+1);
     	
