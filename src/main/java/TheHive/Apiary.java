@@ -34,9 +34,9 @@ public class Apiary {
         return INSTANCE;
     }
     
-    public static void printHives() {
+    public void printHives() {
     	
-    	INSTANCE.HiveList.forEach(Hive->{
+    	this.getInstance().HiveList.forEach(Hive->{
     		System.out.println(Hive.getName());
     	    Hive.printHive();
     	});
