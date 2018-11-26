@@ -1,6 +1,8 @@
-package main.java.TheHive;
+package singleton.java.TheHive;
 
 import java.util.Vector;
+
+import builder.java.TheHive.Hive;
 
 /*************
  * Apiary Class

@@ -1,4 +1,6 @@
-package main.java.TheHive;
+package decorator.java.TheHive;
+
+import builder.java.TheHive.BeeInterface;
 
 public class WoodBeeDecorator extends BeeDecorator {
 	private String color2;

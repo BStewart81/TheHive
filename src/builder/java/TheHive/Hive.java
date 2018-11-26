@@ -1,6 +1,11 @@
-package main.java.TheHive;
+package builder.java.TheHive;
 
 import java.util.Vector;
+
+import decorator.java.TheHive.BrickBeeDecorator;
+import decorator.java.TheHive.ElectricBeeDecorator;
+import decorator.java.TheHive.SteelBeeDecorator;
+import decorator.java.TheHive.WoodBeeDecorator;
 
 public class Hive {
 	

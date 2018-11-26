@@ -1,4 +1,6 @@
-package main.java.TheHive;
+package builder.java.TheHive;
+
+import singleton.java.TheHive.Apiary;
 
 public class Builder {
 	

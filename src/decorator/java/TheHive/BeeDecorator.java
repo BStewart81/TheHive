@@ -1,4 +1,6 @@
-package main.java.TheHive;
+package decorator.java.TheHive;
+
+import builder.java.TheHive.BeeInterface;
 
 public abstract class BeeDecorator implements BeeInterface{
 	

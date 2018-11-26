@@ -1,21 +1,22 @@
-package main.java.TheHive;
+package decorator.java.TheHive;
 
-public class ElectricBeeDecorator extends BeeDecorator{
+import builder.java.TheHive.BeeInterface;
+
+public class BrickBeeDecorator extends BeeDecorator {
+
 	private String color2;
 	private Boolean queen;
 	private String name;
 	private static int count = 0;
 	
-	
-	public ElectricBeeDecorator(BeeInterface decoratedBee) {
+	public BrickBeeDecorator(BeeInterface decoratedBee) {
 		super(decoratedBee);
 		
-		name = "ElectricBee" + String.valueOf(count);
-		color2 = "blue";
+		color2 = "red";
 		queen = false;
+		name = "BrickBee" + String.valueOf(count);
 		count++;
 		System.out.println("construct " + name);
-		
 	}
 
 	@Override
@@ -86,7 +87,4 @@ public class ElectricBeeDecorator extends BeeDecorator{
 		name = nm;
 		
 	}
-
 }
-
-

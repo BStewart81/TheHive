@@ -1,4 +1,4 @@
-package main.java.TheHive;
+package builder.java.TheHive;
 
 public interface BeeInterface {
 	
