@@ -6,6 +6,8 @@ public class ElectricBeeDecorator extends BeeDecorator{
 	private String color2;
 	private String role;
 	private String name;
+	private String hive;
+	
 	private static int count = 0;
 	
 	
@@ -15,6 +17,7 @@ public class ElectricBeeDecorator extends BeeDecorator{
 		if (decoratedBee.getName().equals("")) {
 			decoratedBee.setSpecies("electric");
 			color2 = "blue";
+			hive = "";
 			decoratedBee.setName("ElectricBee" + String.valueOf(count));
 			count++;
 			System.out.println("construct " + name);
@@ -83,6 +86,19 @@ public class ElectricBeeDecorator extends BeeDecorator{
 	public void setName(String nm) {
 		
 		name = nm;
+		
+	}
+	
+	public String getHive() {
+		
+		return hive;
+		
+	}
+	
+	
+	public void setHive(String hv) {
+		
+		name = hv;
 		
 	}
 

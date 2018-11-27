@@ -6,6 +6,7 @@ public class WoodBeeDecorator extends BeeDecorator {
 	private String color2;
 	private String role;
 	private String name;
+	private String hive;
 	private static int count;
 	
 	public WoodBeeDecorator(BeeInterface decoratedBee) {
@@ -14,6 +15,7 @@ public class WoodBeeDecorator extends BeeDecorator {
 		if (decoratedBee.getName().equals("")) {
 			decoratedBee.setSpecies("wood");
 			color2 = "brown";
+			hive = "";
 			decoratedBee.setName("WoodBee" + String.valueOf(count));
 			count++;
 			System.out.println("construct " + name);
@@ -83,6 +85,19 @@ public class WoodBeeDecorator extends BeeDecorator {
 	public void setName(String nm) {
 		
 		name = nm;
+		
+	}
+	
+    public String getHive() {
+		
+		return hive;
+		
+	}
+	
+	
+	public void setHive(String hv) {
+		
+		name = hv;
 		
 	}
 

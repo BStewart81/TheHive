@@ -16,8 +16,11 @@ public interface BeeInterface {
 	
 	public void setName(String nm);
 
-	void setRole(String rl);
+	public void setRole(String rl);
 
-	String getRole();
+	public String getRole();
+	
+	public String getHive();
+	
 
 }

@@ -71,11 +71,20 @@ public class BrickHive implements HiveInterface {
     			} else {
     				buzz.setRole("drone");
     			}
+    			buzz.setHive(getName());
         		
     			bees.add(buzz);
         	 		
     	}
     }
+
+
+
+	@Override
+	public void deleteBee(BeeInterface be) {
+		bees.remove(be);
+		
+	}
 
 
 

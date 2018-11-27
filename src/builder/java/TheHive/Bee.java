@@ -6,6 +6,7 @@ public class Bee implements BeeInterface{
 	private String color1;
 	private String name;
 	private String role;
+	private String hive;
 	
 	public Bee() {
 		
@@ -13,6 +14,7 @@ public class Bee implements BeeInterface{
 		color1 = "black";
 		name = "";
 		role = "";
+		hive = "";
 		
 	}
 
@@ -67,6 +69,12 @@ public class Bee implements BeeInterface{
 		
 		name = nm;
 		
+	}
+
+	@Override
+	public String getHive() {
+		
+		return hive;
 	}
 	
 
