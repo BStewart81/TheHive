@@ -13,7 +13,7 @@ public class BrickBeeDecorator extends BeeDecorator {
 	
 	public BrickBeeDecorator(BeeInterface decoratedBee) {
 		super(decoratedBee);
-		
+		this.decoratedBee = decoratedBee;
 		if (decoratedBee.getName().equals("")) {
 		decoratedBee.setSpecies("brick");
 		color2 = "red";

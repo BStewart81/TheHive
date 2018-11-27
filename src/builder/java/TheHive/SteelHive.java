@@ -2,13 +2,14 @@ package builder.java.TheHive;
 
 import java.util.Vector;
 
+import decorator.java.TheHive.BeeDecorator;
 import decorator.java.TheHive.SteelBeeDecorator;
 
 public class SteelHive implements HiveInterface {
 	
 	private String name;
 	private String species;
-	private Vector <BeeInterface> bees;
+	private Vector <BeeDecorator> bees;
 	private static int count=0;
 	
 	
@@ -17,7 +18,7 @@ public class SteelHive implements HiveInterface {
 		
 		name = "SteelBee" + String.valueOf(count);;
 		species = "steel";
-		bees = new Vector<BeeInterface>();
+		bees = new Vector<BeeDecorator>();
 		populateHive();
 	}
 	
@@ -35,7 +36,7 @@ public class SteelHive implements HiveInterface {
 	}
 	
 	@Override
-    public void addBee(BeeInterface be) {
+    public void addBee(BeeDecorator be) {
 		
 		bees.add(be);
 	}
@@ -53,7 +54,7 @@ public class SteelHive implements HiveInterface {
     }
     
     @Override
-    public Vector<BeeInterface> getBees(){
+    public Vector<BeeDecorator> getBees(){
     	
     	return bees;
     }
@@ -83,7 +84,7 @@ public class SteelHive implements HiveInterface {
 
 
 	@Override
-	public void deleteBee(BeeInterface be) {
+	public void deleteBee(BeeDecorator be) {
 		bees.remove(be);		
 	}
 
