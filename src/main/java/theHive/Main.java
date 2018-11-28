@@ -14,33 +14,34 @@ import template.java.theHive.Ticker;
  */
 
 public class Main {
-  /************
-   * the main method to work the program.
-   * 
-   * @param args are arguments you want to give
-   */
-  public static void main(String[] args) {
+    /************
+     * the main method to work the program.
+     * 
+     * @param args are arguments you want to give
+     */
+    public static void main(String[] args) {
 
-    Apiary.getInstance();
-    Builder build = new Builder();
-    build.buildApiary();
+        Apiary.getInstance();
+        Builder build = new Builder();
+        build.buildApiary();
 
-    Ticker ticker = new Ticker();
-    int count = 0;
+        Ticker ticker = new Ticker();
+        int count = 0;
 
-    while (Apiary.getHiveList().size() > 1 && count <= 10) {
+        while (Apiary.getHiveList().size() > 1 && count <= 10) {
 
-      System.out.println("********* TICK " + count + " *************");
-      System.out.println("starting bee count: " + ticker.getBeeCount());
-      ticker.tick();
-      count++;
-      Apiary.getHiveList().forEach(HiveInterface -> {
-        System.out.println(HiveInterface.getName() + " total: " + HiveInterface.getBees().size());
-      });
+            System.out.println("********* TICK " + count + " *************");
+            System.out.println("starting bee count: " + ticker.getBeeCount());
+            ticker.tick();
+            count++;
+            Apiary.getHiveList().forEach(HiveInterface -> {
+                System.out.println(
+                        HiveInterface.getName() + " total: " + HiveInterface.getBees().size());
+            });
+        }
+
+        System.out.println("done");
+
     }
-
-    System.out.println("done");
-
-  }
 
 }

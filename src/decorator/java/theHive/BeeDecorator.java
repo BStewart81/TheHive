@@ -13,31 +13,31 @@ import builder.java.theHive.BeeInterface;
 
 public abstract class BeeDecorator implements BeeInterface {
 
-  protected BeeInterface decoratedBee;
+    protected BeeInterface decoratedBee;
 
-  public BeeDecorator(BeeInterface decoratedBee) {
-    this.decoratedBee = decoratedBee;
-  }
+    public BeeDecorator(BeeInterface decoratedBee) {
+        this.decoratedBee = decoratedBee;
+    }
 
-  /*********
-   * sets the species of the bee.
-   * 
-   * @param sp is the new species
-   */
-  public void setSpecies(String sp) {
+    /*********
+     * sets the species of the bee.
+     * 
+     * @param sp is the new species
+     */
+    public void setSpecies(String sp) {
 
-    decoratedBee.setSpecies(sp);
+        decoratedBee.setSpecies(sp);
 
-  }
+    }
 
-  /*********
-   * gets the species of the bee.
-   * 
-   * @return you recieve the species of the bee
-   */
-  public String getSpecies() {
+    /*********
+     * gets the species of the bee.
+     * 
+     * @return you recieve the species of the bee
+     */
+    public String getSpecies() {
 
-    return decoratedBee.getSpecies();
-  }
+        return decoratedBee.getSpecies();
+    }
 
 }

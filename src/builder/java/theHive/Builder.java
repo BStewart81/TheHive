@@ -12,40 +12,40 @@ import singleton.java.theHive.Apiary;
  */
 public class Builder {
 
-  private int rndm;
-  private int speciesChooser;
-  public String[] speciesList = { "brick", "electric", "steel", "wood" };
+    private int rndm;
+    private int speciesChooser;
+    public String[] speciesList = { "brick", "electric", "steel", "wood" };
 
-  /********
-   * creates an apiary.
-   */
-  public void buildApiary() {
+    /********
+     * creates an apiary.
+     */
+    public void buildApiary() {
 
-    HiveInterface hv;
+        HiveInterface hv;
 
-    rndm = (int) ((Math.random() * 9) + 4);
-    speciesChooser = 1;
+        rndm = (int) ((Math.random() * 9) + 4);
+        speciesChooser = 1;
 
-    for (int i = 0; i < rndm; i++) {
+        for (int i = 0; i < rndm; i++) {
 
-      if (speciesChooser == 1) {
-        hv = new BrickHive();
-      } else if (speciesChooser == 2) {
-        hv = new ElectricHive();
-      } else if (speciesChooser == 3) {
-        hv = new SteelHive();
-      } else {
-        hv = new WoodHive();
-      }
+            if (speciesChooser == 1) {
+                hv = new BrickHive();
+            } else if (speciesChooser == 2) {
+                hv = new ElectricHive();
+            } else if (speciesChooser == 3) {
+                hv = new SteelHive();
+            } else {
+                hv = new WoodHive();
+            }
 
-      Apiary.addToHiveList(hv);
+            Apiary.addToHiveList(hv);
 
-      if (speciesChooser >= 4) {
-        speciesChooser = 0;
-      }
-      speciesChooser++;
-      System.out.println("BUILDER created hive");
+            if (speciesChooser >= 4) {
+                speciesChooser = 0;
+            }
+            speciesChooser++;
+            System.out.println("BUILDER created hive");
 
+        }
     }
-  }
 }

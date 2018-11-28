@@ -1,8 +1,8 @@
 package singleton.java.theHive;
 
-import java.util.Vector;
-
 import builder.java.theHive.HiveInterface;
+
+import java.util.Vector;
 
 /*************
  * Apiary Class.
@@ -15,58 +15,58 @@ import builder.java.theHive.HiveInterface;
 
 public class Apiary {
 
-  private static final Apiary INSTANCE = new Apiary();
+    private static final Apiary INSTANCE = new Apiary();
 
-  private static Vector<HiveInterface> HiveList;
+    private static Vector<HiveInterface> HiveList;
 
-  /*************
-   * creates an apiary.
-   */
-  private Apiary() {
+    /*************
+     * creates an apiary.
+     */
+    private Apiary() {
 
-    HiveList = new Vector<HiveInterface>();
-    System.out.println("*******NEW APIARY CREATED******");
+        HiveList = new Vector<HiveInterface>();
+        System.out.println("*******NEW APIARY CREATED******");
 
-  }
+    }
 
-  /*************
-   * returns the single Apiary instance.
-   * 
-   * @return the instance of the apiary
-   */
-  public static Apiary getInstance() {
-    return INSTANCE;
-  }
+    /*************
+     * returns the single Apiary instance.
+     * 
+     * @return the instance of the apiary
+     */
+    public static Apiary getInstance() {
+        return INSTANCE;
+    }
 
-  /*************
-   * returns the single Apiary's HiveList.
-   * 
-   * @return a vector of the hives
-   */
-  public static Vector<HiveInterface> getHiveList() {
+    /*************
+     * returns the single Apiary's HiveList.
+     * 
+     * @return a vector of the hives
+     */
+    public static Vector<HiveInterface> getHiveList() {
 
-    return HiveList;
-  }
+        return HiveList;
+    }
 
-  /*************
-   * adds given Hive to HiveList.
-   * 
-   * @param hv the hive you want to add
-   */
-  public static void addToHiveList(HiveInterface hv) {
+    /*************
+     * adds given Hive to HiveList.
+     * 
+     * @param hv the hive you want to add
+     */
+    public static void addToHiveList(HiveInterface hv) {
 
-    HiveList.add(hv);
+        HiveList.add(hv);
 
-  }
+    }
 
-  /*************
-   * removes given Hive from HiveList.
-   * 
-   * @param hv hive you want to remove
-   */
-  public static void removeFromHiveList(HiveInterface hv) {
+    /*************
+     * removes given Hive from HiveList.
+     * 
+     * @param hv hive you want to remove
+     */
+    public static void removeFromHiveList(HiveInterface hv) {
 
-    HiveList.remove(hv);
+        HiveList.remove(hv);
 
-  }
+    }
 }

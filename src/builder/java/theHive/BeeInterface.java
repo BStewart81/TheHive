@@ -11,23 +11,23 @@ package builder.java.theHive;
 
 public interface BeeInterface {
 
-  public void setSpecies(String sp);
+    public void setSpecies(String sp);
 
-  public String getSpecies();
+    public String getSpecies();
 
-  public void setColor1(String clr);
+    public void setColor1(String clr);
 
-  public String getColor1();
+    public String getColor1();
 
-  public String getName();
+    public String getName();
 
-  public void setName(String nm);
+    public void setName(String nm);
 
-  public void setRole(String rl);
+    public void setRole(String rl);
 
-  public String getRole();
+    public String getRole();
 
-  public String getHive();
+    public String getHive();
 
-  public void setHive(String hv);
+    public void setHive(String hv);
 }

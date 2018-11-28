@@ -1,9 +1,9 @@
 package builder.java.theHive;
 
-import java.util.Vector;
-
 import decorator.java.theHive.BeeDecorator;
 import decorator.java.theHive.BrickBeeDecorator;
+
+import java.util.Vector;
 
 /*************
  * BrickHive Class.
@@ -16,77 +16,77 @@ import decorator.java.theHive.BrickBeeDecorator;
 
 public class BrickHive implements HiveInterface {
 
-  private String name;
-  private String species;
-  private Vector<BeeDecorator> bees;
-  private static int count = 0;
+    private String name;
+    private String species;
+    private Vector<BeeDecorator> bees;
+    private static int count = 0;
 
-  /*********
-   * creates a brick hive.
-   */
-  public BrickHive() {
+    /*********
+     * creates a brick hive.
+     */
+    public BrickHive() {
 
-    name = "BrickBee" + String.valueOf(count);
-    ;
-    species = "brick";
-    bees = new Vector<BeeDecorator>();
-    populateHive();
-  }
+        name = "BrickBee" + String.valueOf(count);
+        ;
+        species = "brick";
+        bees = new Vector<BeeDecorator>();
+        populateHive();
+    }
 
-  public void setName(String nm) {
+    public void setName(String nm) {
 
-    name = nm;
-  }
+        name = nm;
+    }
 
-  public void setSpecies(String sp) {
+    public void setSpecies(String sp) {
 
-    species = sp;
-  }
+        species = sp;
+    }
 
-  public void addBee(BeeDecorator be) {
+    public void addBee(BeeDecorator be) {
 
-    bees.add(be);
-  }
+        bees.add(be);
+    }
 
-  public String getName() {
+    public String getName() {
 
-    return name;
-  }
+        return name;
+    }
 
-  public String getSpecies() {
+    public String getSpecies() {
 
-    return species;
-  }
+        return species;
+    }
 
-  public Vector<BeeDecorator> getBees() {
+    public Vector<BeeDecorator> getBees() {
 
-    return bees;
-  }
+        return bees;
+    }
 
-  @Override
-  public void populateHive() {
+    @Override
+    public void populateHive() {
 
-    for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < 50; i++) {
 
-      BrickBeeDecorator buzz = new BrickBeeDecorator(new Bee());
-      if (i <= 4) {
-        buzz.setRole("queen");
-      } else if (i > 4 && i <= 25) {
-        buzz.setRole("warrior");
-      } else {
-        buzz.setRole("drone");
-      }
-      buzz.setHive(getName());
+            BrickBeeDecorator buzz = new BrickBeeDecorator(new Bee());
+            if (i <= 4) {
+                buzz.setRole("queen");
+            } else if (i > 4 && i <= 25) {
+                buzz.setRole("warrior");
+            } else {
+                buzz.setRole("drone");
+            }
+            buzz.setHive(getName());
 
-      bees.add(buzz);
+            bees.add(buzz);
+
+        }
+    }
+
+    @Override
+    public void deleteBee(BeeDecorator be) {
+        bees.remove(be);
 
     }
-  }
-
-  @Override
-  public void deleteBee(BeeDecorator be) {
-    bees.remove(be);
-
-  }
 
 }

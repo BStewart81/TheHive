@@ -1,19 +1,28 @@
 
 apply plugin: 'application'
-sourceSets { 
-	main { 
-		java { 
+apply plugin: 'jacoco'
+apply plugin: 'java'
+
+sourceSets {
+	main {
+		java {
 			srcDirs = [
 			'src/main/java',
 			'src/builder/java',
-			'src/singleton/java',	
+			'src/singleton/java',
 			 'src/decorator/java',
 			'src/template/java'
 				]
-			 }	
+			 }
 		}
 	}
 
+	jar {
+			 baseName = 'BStewar8'
+			 version = '1.0'
+			 manifest {
+										attributes 'Main-Class': 'main.java.theHive.Main' }
+		}
 
 ///////////////////////////////////////////////////////////////////////////
 // Definint Main class
@@ -26,5 +35,30 @@ mainClassName = 'main.java.theHive.Main'
 ///////////////////////////////////////////////////////////////////////////
 repositories {
   mavenCentral()
+	jcenter()
+}
+dependencies {
+    compile "junit:junit:4.12"
+
 }
 
+
+///////////////////////////////////////////////////////////////////////////
+// Configure Checkstyle
+///////////////////////////////////////////////////////////////////////////
+apply plugin: 'checkstyle'
+checkstyle {
+  // Keep checkstyle a little quieter
+  ignoreFailures = true
+  showViolations = false
+}
+
+tasks.withType(Checkstyle) {
+  reports {
+    html.enabled = true
+    xml.enabled = false
+  }
+}
+checkstyle {
+    toolVersion = "8.8"
+}

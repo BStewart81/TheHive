@@ -1,8 +1,8 @@
 package builder.java.theHive;
 
-import java.util.Vector;
-
 import decorator.java.theHive.BeeDecorator;
+
+import java.util.Vector;
 
 /*************
  * HiveInterface Class.
@@ -14,20 +14,20 @@ import decorator.java.theHive.BeeDecorator;
  */
 public interface HiveInterface {
 
-  public void setName(String nm);
+    public void setName(String nm);
 
-  public void setSpecies(String sp);
+    public void setSpecies(String sp);
 
-  public void addBee(BeeDecorator be);
+    public void addBee(BeeDecorator be);
 
-  public void deleteBee(BeeDecorator be);
+    public void deleteBee(BeeDecorator be);
 
-  public String getName();
+    public String getName();
 
-  public String getSpecies();
+    public String getSpecies();
 
-  public Vector<BeeDecorator> getBees();
+    public Vector<BeeDecorator> getBees();
 
-  public void populateHive();
+    public void populateHive();
 
 }

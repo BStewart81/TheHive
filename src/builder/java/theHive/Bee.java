@@ -10,86 +10,86 @@ package builder.java.theHive;
  */
 
 public class Bee implements BeeInterface {
-  private String species;
-  private String color1;
-  private String name;
-  private String role;
-  private String hive;
+    private String species;
+    private String color1;
+    private String name;
+    private String role;
+    private String hive;
 
-  /**********
-   * creates a bee.
-   */
-  public Bee() {
+    /**********
+     * creates a bee.
+     */
+    public Bee() {
 
-    species = "";
-    color1 = "black";
-    name = "";
-    role = "";
-    hive = "";
+        species = "";
+        color1 = "black";
+        name = "";
+        role = "";
+        hive = "";
 
-  }
+    }
 
-  @Override
-  public void setSpecies(String sp) {
+    @Override
+    public void setSpecies(String sp) {
 
-    species = sp;
+        species = sp;
 
-  }
+    }
 
-  @Override
-  public String getSpecies() {
+    @Override
+    public String getSpecies() {
 
-    return species;
-  }
+        return species;
+    }
 
-  @Override
-  public void setColor1(String clr) {
+    @Override
+    public void setColor1(String clr) {
 
-    color1 = clr;
-  }
+        color1 = clr;
+    }
 
-  @Override
-  public String getColor1() {
+    @Override
+    public String getColor1() {
 
-    return color1;
-  }
+        return color1;
+    }
 
-  @Override
-  public String getRole() {
+    @Override
+    public String getRole() {
 
-    return role;
+        return role;
 
-  }
+    }
 
-  @Override
-  public void setRole(String rl) {
+    @Override
+    public void setRole(String rl) {
 
-    role = rl;
-  }
+        role = rl;
+    }
 
-  @Override
-  public String getName() {
+    @Override
+    public String getName() {
 
-    return name;
+        return name;
 
-  }
+    }
 
-  @Override
-  public void setName(String nm) {
+    @Override
+    public void setName(String nm) {
 
-    name = nm;
+        name = nm;
 
-  }
+    }
 
-  @Override
-  public String getHive() {
+    @Override
+    public String getHive() {
 
-    return hive;
-  }
+        return hive;
+    }
 
-  @Override
-  public void setHive(String hv) {
-    hive = hv;
-  }
+    @Override
+    public void setHive(String hv) {
+        hive = hv;
+    }
 
 }

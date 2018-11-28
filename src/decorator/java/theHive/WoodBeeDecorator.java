@@ -12,103 +12,103 @@ import builder.java.theHive.BeeInterface;
  */
 
 public class WoodBeeDecorator extends BeeDecorator {
-  private String color2;
+    private String color2;
 
-  private static int count;
+    private static int count;
 
-  /************
-   * decorates a bee as a wood bee.
-   * 
-   * @param decoratedBee is the bee you want to decorate
-   */
-  public WoodBeeDecorator(BeeInterface decoratedBee) {
-    super(decoratedBee);
+    /************
+     * decorates a bee as a wood bee.
+     * 
+     * @param decoratedBee is the bee you want to decorate
+     */
+    public WoodBeeDecorator(BeeInterface decoratedBee) {
+        super(decoratedBee);
 
-    if (decoratedBee.getName().equals("")) {
-      decoratedBee.setSpecies("wood");
-      color2 = "brown";
+        if (decoratedBee.getName().equals("")) {
+            decoratedBee.setSpecies("wood");
+            color2 = "brown";
 
-      decoratedBee.setName("WoodBee" + String.valueOf(count));
-      count++;
-      System.out.println("construct " + getName());
-    } else {
-      decoratedBee.setColor1("brown");
+            decoratedBee.setName("WoodBee" + String.valueOf(count));
+            count++;
+            System.out.println("construct " + getName());
+        } else {
+            decoratedBee.setColor1("brown");
+        }
     }
-  }
 
-  @Override
-  public void setSpecies(String sp) {
+    @Override
+    public void setSpecies(String sp) {
 
-    decoratedBee.setSpecies(sp);
+        decoratedBee.setSpecies(sp);
 
-  }
+    }
 
-  @Override
-  public String getSpecies() {
+    @Override
+    public String getSpecies() {
 
-    return decoratedBee.getSpecies();
-  }
+        return decoratedBee.getSpecies();
+    }
 
-  @Override
-  public void setColor1(String clr) {
+    @Override
+    public void setColor1(String clr) {
 
-    decoratedBee.setColor1(clr);
-  }
+        decoratedBee.setColor1(clr);
+    }
 
-  @Override
-  public String getColor1() {
+    @Override
+    public String getColor1() {
 
-    return decoratedBee.getColor1();
-  }
+        return decoratedBee.getColor1();
+    }
 
-  public void setColor2(String clr) {
+    public void setColor2(String clr) {
 
-    color2 = clr;
-  }
+        color2 = clr;
+    }
 
-  public String getColor2() {
+    public String getColor2() {
 
-    return color2;
-  }
+        return color2;
+    }
 
-  @Override
-  public String getRole() {
+    @Override
+    public String getRole() {
 
-    return decoratedBee.getRole();
+        return decoratedBee.getRole();
 
-  }
+    }
 
-  @Override
-  public void setRole(String rl) {
+    @Override
+    public void setRole(String rl) {
 
-    decoratedBee.setRole(rl);
-  }
+        decoratedBee.setRole(rl);
+    }
 
-  @Override
-  public String getName() {
+    @Override
+    public String getName() {
 
-    return decoratedBee.getName();
+        return decoratedBee.getName();
 
-  }
+    }
 
-  @Override
-  public void setName(String nm) {
+    @Override
+    public void setName(String nm) {
 
-    decoratedBee.setName(nm);
+        decoratedBee.setName(nm);
 
-  }
+    }
 
-  @Override
-  public String getHive() {
+    @Override
+    public String getHive() {
 
-    return decoratedBee.getHive();
+        return decoratedBee.getHive();
 
-  }
+    }
 
-  @Override
-  public void setHive(String hv) {
+    @Override
+    public void setHive(String hv) {
 
-    decoratedBee.setHive(hv);
+        decoratedBee.setHive(hv);
 
-  }
+    }
 }
