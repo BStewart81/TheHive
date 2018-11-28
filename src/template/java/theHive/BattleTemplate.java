@@ -28,7 +28,6 @@ public abstract class BattleTemplate {
   public final void battle(BeeDecorator bz1, BeeDecorator bz2) {
 
     fight(bz1, bz2);
-    decWinner(bz1);
-    desLoser(bz2);
+
   }
 }

@@ -58,6 +58,11 @@ public class EvenFight extends BattleTemplate {
   @Override
   void decWinner(BeeDecorator bz1) {
 
+    if (!bz1.getSpecies().equals(bee1)) {
+      bee2 = bee1;
+      bee1 = bz1.getSpecies();
+    }
+
     if (bee2.equals("brick")) {
       bz1 = new BrickBeeDecorator(bz1);
     } else if (bee2.equals("steel")) {
@@ -72,6 +77,11 @@ public class EvenFight extends BattleTemplate {
 
   @Override
   void desLoser(BeeDecorator bz2) {
+
+    if (!bz2.getSpecies().equals(bee2)) {
+      bee1 = bee2;
+      bee2 = bz2.getSpecies();
+    }
 
     Apiary.getHiveList().forEach(HiveInterface -> {
       if (HiveInterface.getName().equals(bz2.getHive())) {
